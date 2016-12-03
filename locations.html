@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Study Space Map</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="starter-template.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+      #map {
+        height: 400px;
+        width: 600px;
+        display: block;
+        margin: auto;
+        margin-top: 40px;
+       }
+    </style>
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">QUExamBoss</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="calculator.html">Final Calculator</a></li>
+            <li><a href="puppies.html">Stressed Out?</a></li>
+            <li class="active"><a href="locations.html">Locations</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+
+      <div class="starter-template">
+        <h1>Library Locations</h1>
+        <div id="map"></div>
+        <script>
+          function initMap() {
+            var stauff    = {lat: 44.2284, lng: -76.4962};
+            var douglas   = {lat: 44.2274, lng: -76.4951};
+            var bracken   = {lat: 44.2245, lng: -76.4916};
+            var education = {lat: 44.2240, lng: -76.5142};
+            var jordan    = {lat: 44.2250, lng: -76.4955};
+            var lederman  = {lat: 44.2277, lng: -76.4971};
+            var archives  = {lat: 44.2265, lng: -76.4925};
+
+            var map = new google.maps.Map(document.getElementById('map'), {
+              zoom: 14,
+              center: stauff
+            });
+
+            var markerstauff = new google.maps.Marker({
+              position: stauff,
+              map: map
+            });
+            var markerdouglas = new google.maps.Marker({
+              position: douglas,
+              map: map
+            });
+            var markerbracken = new google.maps.Marker({
+              position: bracken,
+              map: map
+            });
+            var markereducation = new google.maps.Marker({
+              position: education,
+              map: map
+            });
+            var markerjordan = new google.maps.Marker({
+              position: jordan,
+              map: map
+            });
+            var markerlederman = new google.maps.Marker({
+              position: lederman,
+              map: map
+            });
+            var markerarhives = new google.maps.Marker({
+              position: archives,
+              map: map
+            });
+
+          }
+        </script>
+        <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCr9t-pHhxFtpe0mct41rYpDVssBPYNUy4&callback=initMap">
+        </script>
+      </div>
+
+    </div><!-- /.container -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="./dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
