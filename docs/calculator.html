@@ -105,7 +105,10 @@
 
                 <!-- <div class="col-xs-10"> -->
                 <div>
-                <h2 id = "output" sytle = "text-align: center;"></h2>
+                <h2 id = "output" sytle = "text-align: center; <br>"></h2>
+                
+                <h3 id = "output2" sytle = "text-align: center;"></h2>
+
                 </div>
 
 
@@ -121,8 +124,15 @@
                     x = a - x;
                     x = x / c;
 
-                    console.log(x)
-                    document.getElementById("output").innerHTML = "Aim for a " + x + "% on your final :) ";
+
+                    document.getElementById("output").innerHTML = "Aim for a " + x + "% on your final :)";
+
+                    a = 50;
+                    x = b - (b * c);
+                    x = a - x;
+                    x = x / c;
+
+                    document.getElementById("output2").innerHTML = "Look's like you'll need a " + x + "% on the final to pass.";
 
                     // return x;
                   }
