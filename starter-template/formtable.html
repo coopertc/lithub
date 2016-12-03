@@ -6,7 +6,7 @@
 </head>
 <body>
 
-<!--<form>-->
+<!--
 	<div class="container">
   <h2>Basic Table</h2>
   <p>The .table class adds basic styling (light padding and only horizontal dividers) to a table:</p>            
@@ -22,8 +22,8 @@
       <tr>
         <td><form> Evaluation 1:<input type="text" name="evaluation1"><br>
 		</td>
-        <td><form>Grade 1:<input type="text" name="grade1"><br></td>
-        <td><form> Weight 1:<input type="text" name="weight1"><br></td>
+        <td><form>Grade 1:<input type="text" name="grade1" id="g1"> <br></td>
+        <td><form> Weight 1:<input type="text" name="weight1" id="w1"><br></td>
       </tr>
       <tr>
         <td><form> Evaluation 2:<input type="text" name="evaluation2"><br></td>
@@ -50,12 +50,108 @@
       <td><br></td>
       <td><br></td>
        </tr>
+     
+
+	  
 
     </tbody>
   </table>
+  <p>Click the button to calculate!</p>
+                <button onclick="myFunction()">Try it</button>
+                <br/>              
+                <script>
+                  function myFunction() {
+                    var y = document.getElementById("g1").value;
+                    var z = document.getElementById("w1").value;
+                    var x = +y + +z;
+                    document.getElementById("demo").innerHTML = x;
+                    return x;
+                  }
+                </script>  
+  <p id="demo">0</p>
 </div>
-<!--</form>-->
+-->
 
+<br>
+<br>
+<script type='text/javascript'>
+        function addFields(){
+            // Number of inputs to create
+            var number = document.getElementById("member").value;
+            // Container <div> where dynamic content will be placed
+            var container = document.getElementById("container");
+            // Clear previous contents of the container
+            while (container.hasChildNodes()) {
+                container.removeChild(container.lastChild);
+            }
+            for (i=0;i<number;i++){
+                // Append a node with a random text
+                container.appendChild(document.createTextNode("Grade " + (i+1)));
+                // Create an <input> element, set its type and name attributes
+                var input = document.createElement("input");
+                input.type = "text";
+                input.name = "grade" + i;
+                container.appendChild(input);
+                 container.appendChild(document.createTextNode("Grade Weighting " + (i+1)));
+                // Create an <input> element, set its type and name attributes
+                var input = document.createElement("input");
+                input.type = "text";
+                input.name = "weight" + i;
+                container.appendChild(input);
+                // Append a line break 
+                container.appendChild(document.createElement("br"));
+            }
+        }
+    </script>
+
+     <input type="text" id="member" name="member" value="">Number of members: (max. 10)<br />
+
+    <a href="#" id="filldetails" onclick="addFields()">Fill Details</a>
+    <div id="container"/>
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+
+    <script type='text/javascript'>//good one
+        function addFields(){
+            // Number of inputs to create
+            var number = document.getElementById("member").value;
+            // Container <div> where dynamic content will be placed
+            var container = document.getElementById("container");
+            // Clear previous contents of the container
+            while (container.hasChildNodes()) {
+                container.removeChild(container.lastChild);
+            }
+            for (i=0;i<number;i++){
+                // Append a node with a random text
+                container.appendChild(document.createTextNode("Grade " + (i+1)));
+
+            	var formGroup = $('<div class="form-group"></div>');
+
+                formGroup.append('<label for="Desired Grade"></label>')
+                formGroup.append('<input type="number" class="form-control" id="D_grade" aria-describedby="emailHelp" placeholder="Enter Grade" min = "0" max = "100" style = "width: 200px;">')
+
+            	$("#container").append(formGroup)
+
+                // Create an <input> element, set its type and name attributes
+                // var input = document.createElement("input");
+                // input.type = "text";
+                // input.name = "grade" + i;
+                // container.appendChild(input);
+                //  container.appendChild(document.createTextNode("Grade Weighting " + (i+1)));
+                // // Create an <input> element, set its type and name attributes
+                // var input = document.createElement("input");
+                // input.type = "text";
+                // input.name = "weight" + i;
+                // container.appendChild(input);
+                // // Append a line break 
+                // container.appendChild(document.createElement("br"));
+            }
+        }
+    </script>
 </body>
 
 </html>

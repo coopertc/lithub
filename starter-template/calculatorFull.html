@@ -54,29 +54,68 @@
       </div>
     </nav>
 
-    <div class="container">
-
-      <div class="starter-template">
+    <div class="container"> <!--Calculator container -->
+     
+     <div class="starter-template">
+      <h1>Final Grade Calculator</h1>
+        <p class="lead">What will it take to pass the class?<br></p>
         <div class ="Calculator">
+       
+        <a href="calculator.html" class="btn btn-info" role="button">Basic Calculator</a>
+        <br>
+    
+              
+        <form class = "form-inline">
+          <div class="form-group">
+        <br>
+            <label for="Desired Grade">Grade</label>
+            <input type="number" class="form-control" id="D_grade" aria-describedby="emailHelp" placeholder="Enter Grade" min = "0" max = "100" style = "width: 200px;">
+            <br>
+          </div>
+          <div class="form-group">
+          <br>
+            <label for="CurrentGrade">Grade Weighting</label>
+            <input type="number" class="form-control" id="C_grade" aria-describedby="emailHelp" placeholder="Enter Grade" min = "0" max = "100" style = "width: 200px;">
+            <br>
+
+          </div>
+
+          </form> 
+
+          <form class = "form-inline">
+          <div class="form-group">
+
+            <label for="Desired Grade">Grade</label>
+            <input type="number" class="form-control" id="D_grade" aria-describedby="emailHelp" placeholder="Enter Grade" min = "0" max = "100" style = "width: 200px;">
+            <br>
+          </div>
+          <div class="form-group">
+            <label for="CurrentGrade">Grade Weighting</label>
+            <input type="number" class="form-control" id="C_grade" aria-describedby="emailHelp" placeholder="Enter Grade" min = "0" max = "100" style = "width: 200px;">
+            <br>
+
+          </div>
+
+          </form>           
+
              <p>Click the button to calculate!</p>
                 <button onclick="myFunction()">Try it</button>
                 <br/>
-                Enter first number:
-                <input type="text" id="txt1" name="text1">Enter second number:
-                <input type="text" id="txt2" name="text2">
-                <p id="demo"></p>
+                
+                
                 <script>
                   function myFunction() {
-                    var y = document.getElementById("txt1").value;
-                    var z = document.getElementById("txt2").value;
+                    var y = document.getElementById("D_grade").value;
+                    var z = document.getElementById("C_grade").value;
                     var x = +y + +z;
+                    
                     document.getElementById("demo").innerHTML = x;
+                    return x;
                   }
                 </script>         
         </div>
 
-        <h1>Bootstrap starter template</h1>
-        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+        
       </div>
 
     </div><!-- /.container -->
