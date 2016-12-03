@@ -5,3 +5,8 @@ body {
   padding: 40px 15px;
   text-align: center;
 }
+
+.dog-img {
+  margin: 0 0 0 0 !important;
+  padding: 0 0 0 0 !important;
+}
