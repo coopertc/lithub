@@ -48,79 +48,74 @@
           <ul class="nav navbar-nav">
             <li> <a href="index.html"> Home</a></li>
             <li class="active"> <a href="calculator.html">Final Calculator</a></li>
-            <li> <a href="puppies.html">Puppy Therapy</a></li>
+            <li> <a href="#contact">Contact</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </nav>
 
     <div class="container"> <!--Calculator container -->
-
+     
      <div class="starter-template">
       <h1>Final Grade Calculator</h1>
         <p class="lead">What will it take to pass the class?<br></p>
-
         <div class ="Calculator">
+       
+        <a href="calculator.html" class="btn btn-info" role="button">Basic Calculator</a>
+        <br>
+    
+              
+        <form class = "form-inline">
+          <div class="form-group">
+        <br>
+            <label for="Desired Grade">Grade</label>
+            <input type="number" class="form-control" id="D_grade" aria-describedby="emailHelp" placeholder="Enter Grade" min = "0" max = "100" style = "width: 200px;">
+            <br>
+          </div>
+          <div class="form-group">
+          <br>
+            <label for="CurrentGrade">Grade Weighting</label>
+            <input type="number" class="form-control" id="C_grade" aria-describedby="emailHelp" placeholder="Enter Grade" min = "0" max = "100" style = "width: 200px;">
+            <br>
 
+          </div>
 
+          </form> 
 
-        <a href="calculatorFull.html" class="btn btn-info" role="button">Full Calculator</a>
+          <form class = "form-inline">
+          <div class="form-group">
 
-        <form >
-         <div class="form-group row">
-            <label for="example-number-input" class="col-xs-2 col-form-label">Grade % Desired</label>
-              <div class="col-xs-10">
-                <input class="form-control" type="number" value="100" id="D_grade">
-              </div>
-         </div>
-         <div class="form-group row">
-            <label for="example-number-input" class="col-xs-2 col-form-label">Final Weight %</label>
-              <div class="col-xs-10">
-                <input class="form-control" type="number" value="100" id="F_weight">
-              </div>
-         </div>
-         <div class="form-group row">
-            <label for="example-number-input" class="col-xs-2 col-form-label">Current % Grade</label>
-              <div class="col-xs-10">
-                <input class="form-control" type="number" value="70" id="C_grade">
-              </div>
-         </div>
+            <label for="Desired Grade">Grade</label>
+            <input type="number" class="form-control" id="D_grade" aria-describedby="emailHelp" placeholder="Enter Grade" min = "0" max = "100" style = "width: 200px;">
+            <br>
+          </div>
+          <div class="form-group">
+            <label for="CurrentGrade">Grade Weighting</label>
+            <input type="number" class="form-control" id="C_grade" aria-describedby="emailHelp" placeholder="Enter Grade" min = "0" max = "100" style = "width: 200px;">
+            <br>
 
+          </div>
 
-        </form>
+          </form>           
 
              <p>Click the button to calculate!</p>
-                <!-- <button onclick="myFunction()">Try it</button> -->
-                <button type="button" class="btn btn-info" onclick = "myFunction()">Calculate</button>
+                <button onclick="myFunction()">Try it</button>
                 <br/>
-                <br/>
-
-                <div class="col-xs-10">
-                <h2 id = "output"></h2>
-                </div>
-
-
+                
+                
                 <script>
                   function myFunction() {
-                    var a = +(document.getElementById("D_grade").value);//desired grade
-                    var b = +(document.getElementById("C_grade").value);//current grade
-                    var c = +(document.getElementById("F_weight").value);//final weight
-                    c = c/100;
-
-                    // var x = (a - (b * (100 - c)) / c;
-                    var x = b - (b * c);
-                    x = a - x;
-                    x = x / c;
-
-                    console.log(x)
-                    document.getElementById("output").innerHTML = x;
-
-                    // return x;
+                    var y = document.getElementById("D_grade").value;
+                    var z = document.getElementById("C_grade").value;
+                    var x = +y + +z;
+                    
+                    document.getElementById("demo").innerHTML = x;
+                    return x;
                   }
-                </script>
+                </script>         
         </div>
 
-
+        
       </div>
 
     </div><!-- /.container -->
