@@ -35,7 +35,7 @@
         width: 600px;
         display: block;
         margin: auto;
-        margin-top: 40px;
+        margin-top: 20px;
        }
     </style>
   </head>
@@ -59,11 +59,14 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="calculator.html">Final Calculator</a></li>
             <li><a href="puppies.html">Stressed Out?</a></li>
-            <li class="active"><a href="locations.html">Locations</a></li>
+            <li class="active"><a href="locations.html">Where to Study</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </nav>
+
+
+
 
     <div class="container">
 
@@ -120,14 +123,48 @@
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCr9t-pHhxFtpe0mct41rYpDVssBPYNUy4&callback=initMap">
         </script>
       </div>
+    </div>
 
-    </div><!-- /.container -->
+<div id="studyTable" style = "padding-top: 5px;">
+    <table class="table">
+  <thead class="thead-inverse">
+    <tr>
+      <th style = " text-align: center; ">Room Booking</th>
+      <th style = " text-align: center; ">Portal</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Stauffer Library</th>
+      <td><a href = "http://booking.library.queensu.ca/booking/stauffer-rooms" target="_blank"> I want a Stauffer room!</a></td>
+    </tr>
+    <tr>
+      <th scope="row">Douglas Library</th>
+      <td><a href = <td><a href = "http://booking.library.queensu.ca/booking/douglas-rooms" target="_blank"> I want a Douglas room!</a></td> 
+    </tr>
+    <tr>
+      <th scope="row">Law Library</th>
+      <td><a href = <td><a href = "http://booking.library.queensu.ca/booking/law-rooms" target="_blank"> I want to be a lawyer!</a></td> 
+    </tr>
+    <tr>
+      <th scope="row">Health Sciences Library</th>
+      <td><a href = <td><a href = "http://booking.library.queensu.ca/booking/bracken-rooms" target="_blank"> I want to be doctor!</a></td> 
+    </tr>
+     <tr>
+      <th scope="row">Jordan Group Study Rooms</th>
+      <td><a href = <td><a href = "http://booking.library.queensu.ca/booking/jordan-rooms" target="_blank"> Even we don't know where this is!</a></td> 
+    </tr>
+  </tbody>
+</table>
+</div>
+    
+    <!-- /.container -->
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="./dist/js/bootstrap.min.js"></script>
+    <script src="./bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
   </body>
